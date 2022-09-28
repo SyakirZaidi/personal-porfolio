@@ -264,7 +264,7 @@ nav h2 {
 .about-detail {
   padding: 0 5rem 3rem;
   display: flex;
-  text-align: justify;
+  text-align: left;
   justify-content: space-between;
   max-width: 1100px;
   /* background-color: aqua; */
