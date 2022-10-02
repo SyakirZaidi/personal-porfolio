@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/ac74320f70.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Personal Portfolio</title>
   </head>
@@ -210,11 +219,24 @@
     <!-- START CONTACT SECTION -->
     <section id="contact" class="contact">
       <h3 class="header">Contact Me</h3>
-      <form class="contact-form" action="">
-        <label for="name">Name<input type="text" id="name" /></label>
-        <label for="email">Email<input type="email" id="email" /></label>
+      <!-- bootstrap alert -->
+
+      <form class="contact-form" action="" name="submit-to-google-sheet">
+        <label for="name">Name<input type="text" id="name" name="name" /></label>
+        <label for="email">Email<input type="email" id="email" name="email" /></label>
         <label for="message">Message<textarea name="message" id="message" cols="30" rows="10"></textarea></label>
-        <button type="submit" class="btn-submit">Submit</button>
+        <!-- bootstrap alert -->
+        <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+          <strong>Terima Kasih!</strong> Mesej anda telah kami terima.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <!-- submit btn -->
+        <button type="submit" class="btn-submit btn-send">Submit</button>
+        <!-- bootstrap btn -->
+        <button class="btn-submit btn-loading d-none" type="button" disabled>
+          <span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
+          Loading...
+        </button>
       </form>
     </section>
     <!-- END CONTACT SECTION -->
@@ -239,5 +261,10 @@
     </a>
 
     <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

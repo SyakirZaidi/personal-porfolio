@@ -426,6 +426,13 @@ textarea {
   transition: 0.3s ease-out;
 }
 
+.btn-submit.btn-loading {
+  width: 150px;
+  color: var(--main-white);
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+}
+
 .btn-submit:hover {
   background-color: var(--main-color);
   color: var(--main-white);
